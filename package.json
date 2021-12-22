@@ -1,6 +1,6 @@
 {
   "name": "@hotsuitor/upload-dist",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A cli upload dist directory.",
   "main": "src/index.js",
   "bin": {

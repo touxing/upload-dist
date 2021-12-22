@@ -11,3 +11,4 @@ DESTINE_DIR=/var/www/test/
 ```
 
 在项目根目录运行 `upload-dist` 把打包后的 `dist` 目录上传到服务器
+> 服务器上的 `dist` 目录内容会被清空后，再上传

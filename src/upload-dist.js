@@ -9,11 +9,6 @@ const dotenv = require('dotenv').config({
   path: resolvePath('.env.local')
 })
 
-
-
-console.log('path.join', resolvePath('.env.local'));
-console.log('__dirname', process.cwd());
-
 // https://www.npmjs.com/package/ssh2-sftp-client#sec-1
 let Client = require('ssh2-sftp-client')
 let sftp = new Client()
