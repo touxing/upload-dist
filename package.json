@@ -1,6 +1,6 @@
 {
-  "name": "upload-dist",
-  "version": "1.0.0",
+  "name": "@hotsuitor/upload-dist",
+  "version": "1.0.1",
   "description": "A cli upload dist directory.",
   "main": "src/index.js",
   "bin": {
@@ -31,6 +31,7 @@
     "esm": "^3.2.25"
   },
   "devDependencies": {
+    "arg": "^5.0.1",
     "dotenv": "^10.0.0",
     "ssh2-sftp-client": "^7.2.1"
   }

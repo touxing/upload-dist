@@ -1,9 +1,19 @@
 const path = require('path')
 const fs = require('fs')
+const resolvePath = (dir) => {
+  return path.join(process.cwd(), dir)
+}
 // https://www.npmjs.com/package/dotenv
 const dotenv = require('dotenv').config({
-  debug: process.env.DEBUG
+  debug: process.env.DEBUG,
+  path: resolvePath('.env.local')
 })
+
+
+
+console.log('path.join', resolvePath('.env.local'));
+console.log('__dirname', process.cwd());
+
 // https://www.npmjs.com/package/ssh2-sftp-client#sec-1
 let Client = require('ssh2-sftp-client')
 let sftp = new Client()
@@ -15,7 +25,7 @@ const config = {
   port: process.env.SFTP_PORT || 22
 }
 
-let srcDir = path.join(__dirname, process.env.BUILD_DIR)
+let srcDir = resolvePath(process.env.BUILD_DIR)
 let dstDir = process.env.DESTINE_DIR
 
 const isDirectory = str => {
