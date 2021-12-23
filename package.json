@@ -15,8 +15,8 @@
   "author": "hotsuitor@qq.com",
   "keywords": [
     "upload-dist",
-    "upload",
-    "windows"
+    "windows upload",
+    "ssh2-sftp-client"
   ],
   "files": [
     "bin/",
