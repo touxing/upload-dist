@@ -34,12 +34,45 @@ DESTINE_DIR=/var/www/test/
 
 默认读取的配置文件是根目录下的 `.env.local` 配置文件
 
+配置参数
+```
+A cli to upload file to service.
+一个用来上传文件的cli工具。
+
+  The cli can upload file to service by command. It does not need a sftp
+  client. It is configurable.
+  一个用命令上传文件的工具，可以方便前端开发打包后上传dist文件到服务器，
+  支持参数配置。
+
+Options
+
+  -v, --version Boolean        Print current version
+  -h, --help Boolean           Print this usage guide.
+  -c, --config String          The file of configuration. It is consist of
+                               dotenv file. Default profile is ".env.local"
+  -host, --host String         The host of service
+  -u, --username String        The username of service
+  -pwd, --password String      The password of service
+  -p, --port Number            The port of service ssh. Default is 22
+  -s, --sourceFile String      The file wanted to upload service. Using
+                               relative path.
+  -d, --destFile String        The file is want to save on service. Using
+                               absolute path.
+  -t, --test Boolean           Test connect.
+  -i, --ignore String|RegExp   Ignore file in source file. Default ignore file
+                               include these "(.git, node_modules)"
+```
+
 ## Run
+
+查看帮助
+```bash
+npx upload-dist -h
+```
 
 上传命令
 ```
 npx upload-dist
 ```
 
-TODO:
-- [ ] 增加参数读取指定配置文件
+- [x] 增加参数读取指定配置文件 <-- 2023-4-25

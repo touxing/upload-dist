@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "A cli upload dist directory.",
   "main": "src/index.js",
+  "type": "module",
   "bin": {
     "@hotsuitor/upload-dist": "bin/upload.js",
     "upload-dist": "bin/upload.js"
@@ -28,12 +29,11 @@
     "url": "https://github.com/touxing/upload-dist.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "esm": "^3.2.25"
-  },
+  "dependencies": {},
   "devDependencies": {
     "arg": "^5.0.1",
+    "command-line-usage": "^7.0.1",
     "dotenv": "^10.0.0",
-    "ssh2-sftp-client": "^7.2.1"
+    "ssh2-sftp-client": "^9.0.4"
   }
 }
